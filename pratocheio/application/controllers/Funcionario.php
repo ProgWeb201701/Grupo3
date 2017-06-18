@@ -33,7 +33,7 @@ class Funcionario extends CI_Controller{
     /*
      * Adding a new funcionario
      */
-    function add()
+    function adicionar()
     {   
         $this->load->library('form_validation');
 
@@ -62,7 +62,7 @@ class Funcionario extends CI_Controller{
     /*
      * Editing a funcionario
      */
-    function edit($id_login)
+    function editar($id_login)
     {   
         // check if the funcionario exists before trying to edit it
         $data['funcionario'] = $this->Funcionario_model->get_funcionario($id_login);
@@ -99,7 +99,7 @@ class Funcionario extends CI_Controller{
     /*
      * Deleting funcionario
      */
-    function remove($id_login)
+    function remover($id_login)
     {
         $funcionario = $this->Funcionario_model->get_funcionario($id_login);
 

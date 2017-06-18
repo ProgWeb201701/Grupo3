@@ -1,19 +1,19 @@
 <div class="pull-right">
-	<a href="<?php echo site_url('endereco/add'); ?>" class="btn btn-success">Add</a> 
+	<a href="<?php echo site_url('endereco/adicionar'); ?>" class="btn btn-success">Add</a> 
 </div>
 
 <table class="table table-striped table-bordered">
     <tr>
-		<th>Id Endereco</th>
-		<th>Id Cliente</th>
-		<th>Referencia</th>
-		<th>Complemento</th>
-		<th>Cidade</th>
-		<th>Numero</th>
-		<th>Bairro</th>
+		<th>Código</th>
+		<th>Cliente</th>
 		<th>Rua</th>
+                <th>Numero</th>
+                <th>Bairro</th>
 		<th>Cep</th>
-		<th>Actions</th>
+                <th>Cidade</th>
+                <th>Referência</th>
+		<th>Complemento</th>
+		<th>Ações</th>
     </tr>
 	<?php foreach($enderecos as $e){ ?>
     <tr>
@@ -27,8 +27,8 @@
 		<td><?php echo $e['rua']; ?></td>
 		<td><?php echo $e['cep']; ?></td>
 		<td>
-            <a href="<?php echo site_url('endereco/edit/'.$e['id_endereco']); ?>" class="btn btn-info btn-xs">Edit</a> 
-            <a href="<?php echo site_url('endereco/remove/'.$e['id_endereco']); ?>" class="btn btn-danger btn-xs">Delete</a>
+            <a href="<?php echo site_url('endereco/editar/'.$e['id_endereco']); ?>" class="btn btn-info btn-xs">Edit</a> 
+            <a href="<?php echo site_url('endereco/remover/'.$e['id_endereco']); ?>" class="btn btn-danger btn-xs">Delete</a>
         </td>
     </tr>
 	<?php } ?>
