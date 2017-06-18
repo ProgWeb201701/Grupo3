@@ -33,7 +33,7 @@ class Cliente extends CI_Controller{
     /*
      * Adding a new cliente
      */
-    function add()
+    function adicionar()
     {   
         $this->load->library('form_validation');
 
@@ -56,16 +56,21 @@ class Cliente extends CI_Controller{
             redirect('cliente/index');
         }
         else
-        {            
-            $data['_view'] = 'cliente/add';
+        {        
+             $this->load->view('includes/html_header');
+        $this->load->view('includes/menu');
+          $data['_view'] = 'cliente/add';
             $this->load->view('layouts/main',$data);
+        $this->load->view('includes/html_footer');
+          
+            
         }
     }  
 
     /*
      * Editing a cliente
      */
-    function edit($id_cliente)
+    function editar($id_cliente)
     {   
         // check if the cliente exists before trying to edit it
         $data['cliente'] = $this->Cliente_model->get_cliente($id_cliente);
@@ -105,7 +110,7 @@ class Cliente extends CI_Controller{
     /*
      * Deleting cliente
      */
-    function remove($id_cliente)
+    function remover($id_cliente)
     {
         $cliente = $this->Cliente_model->get_cliente($id_cliente);
 

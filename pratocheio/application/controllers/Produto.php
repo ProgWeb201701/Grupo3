@@ -33,7 +33,7 @@ class Produto extends CI_Controller{
     /*
      * Adding a new produto
      */
-    function add()
+    function adicionar()
     {   
         $this->load->library('form_validation');
 
@@ -64,7 +64,7 @@ class Produto extends CI_Controller{
     /*
      * Editing a produto
      */
-    function edit($id_produto)
+    function editar($id_produto)
     {   
         // check if the produto exists before trying to edit it
         $data['produto'] = $this->Produto_model->get_produto($id_produto);
@@ -103,7 +103,7 @@ class Produto extends CI_Controller{
     /*
      * Deleting produto
      */
-    function remove($id_produto)
+    function remover($id_produto)
     {
         $produto = $this->Produto_model->get_produto($id_produto);
 

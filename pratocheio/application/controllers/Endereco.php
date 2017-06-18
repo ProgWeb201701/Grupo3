@@ -33,7 +33,7 @@ class Endereco extends CI_Controller{
     /*
      * Adding a new endereco
      */
-    function add()
+    function adicionar()
     {   
         $this->load->library('form_validation');
 
@@ -75,7 +75,7 @@ class Endereco extends CI_Controller{
     /*
      * Editing a endereco
      */
-    function edit($id_endereco)
+    function editar($id_endereco)
     {   
         // check if the endereco exists before trying to edit it
         $data['endereco'] = $this->Endereco_model->get_endereco($id_endereco);
@@ -125,7 +125,7 @@ class Endereco extends CI_Controller{
     /*
      * Deleting endereco
      */
-    function remove($id_endereco)
+    function remover($id_endereco)
     {
         $endereco = $this->Endereco_model->get_endereco($id_endereco);
 
