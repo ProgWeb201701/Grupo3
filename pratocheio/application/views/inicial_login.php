@@ -1,9 +1,9 @@
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <img src="<?php echo base_url() . 'assets/logo.png' ?>" class="img-thumbnail col-md-4"> 
-    </div>
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="col-sm-6 col-sm-offset-6 col-md-5 col-md-offset-3 main">
     <form class="form-signin" role="form" method="post" action="<?= base_url('index.php/inicial/login') ?>">
+        <div class="col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-4 main">
         <h2 class="form-signin-heading">Login</h2>
+        </div>
         <br>
         <input type="text" class="form-control" placeholder="Usuário" required autofocus name="usuario">
         <br>
