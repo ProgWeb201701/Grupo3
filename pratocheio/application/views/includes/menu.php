@@ -25,7 +25,8 @@
                 <li class="active"><a href="#">Home <span class="sr-only">Delivery Prato Cheio</span></a></li>
 
                 <li><a href="#">Cardápio</a></li>
-                <li><a href="#">Cadastrar Produtos</a></li>
+                <li><a href="<?php echo base_url() ?>index.php/produto/adicionar">Cadastrar Produtos</a></li>
+                <li><a href="<?php echo base_url() ?>index.php/funcionario/adicionar">Cadastrar Funcionário</a></li>
 
             </ul>
 
