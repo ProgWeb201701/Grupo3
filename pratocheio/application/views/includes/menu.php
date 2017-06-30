@@ -2,10 +2,10 @@
 
 
 
-    <div class="col-sm-2 col-sm-offset-10 col-md-12 col-md-offset-0 main">
-        <img src="<?php echo base_url() . 'assets/logo3.png' ?>" style="width:1200px; height: 220px; margin-top: -19px;" class="img-thumbnail col-md-4"> 
-    </div>
-     <nav class="navbar navbar-default navbar-fixed-top">
+<div class="col-sm-2 col-sm-offset-10 col-md-12 col-md-offset-0 main">
+    <img src="<?php echo base_url() . 'assets/logo3.png' ?>" style="width:1200px; height: 220px; margin-top: -19px;" class="img-thumbnail col-md-4"> 
+</div>
+<nav class="navbar navbar-default navbar-fixed-top">
     <div id="navbar" class="navbar-collapse collapse">
         <div class="container-fluid">
 
@@ -25,8 +25,9 @@
                 <li class="active"><a href="#">Home <span class="sr-only">Delivery Prato Cheio</span></a></li>
 
                 <li><a href="#">Cardápio</a></li>
-                <li><a href="<?php echo base_url() ?>index.php/produto/adicionar">Cadastrar Produtos</a></li>
-                <li><a href="<?php echo base_url() ?>index.php/funcionario/adicionar">Cadastrar Funcionário</a></li>
+                <li><a href="#">Pedido</a></li>
+                <li><a href="<?php echo base_url() ?>index.php/cliente/editar" target="_self">Area do Cliente</a></li>
+                    
 
             </ul>
 
