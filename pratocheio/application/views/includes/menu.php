@@ -3,7 +3,7 @@
 
 
 <div class="col-sm-2 col-sm-offset-10 col-md-12 col-md-offset-0 main">
-    <img src="<?php echo base_url() . 'assets/logo3.png' ?>" style="width:1200px; height: 220px; margin-top: -19px;" class="img-thumbnail col-md-4"> 
+    <img src="<?php echo base_url() . 'assets/logo3.png' ?>" style="width:1200px; margin-left: -24px; height: 220px; margin-top: -19px;"> 
 </div>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div id="navbar" class="navbar-collapse collapse">
