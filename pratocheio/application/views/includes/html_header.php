@@ -21,7 +21,9 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/dashboard.css' ?>"/>
     
+      <link rel="stylesheet" href="<?php echo base_url().'assets/css/pratocheio.css' ?>"/>
     
+    <script src="<?php echo base_url().'assets/js/pratocheio.js'?>" type="text/javascript"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->

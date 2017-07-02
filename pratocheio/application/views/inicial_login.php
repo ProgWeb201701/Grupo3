@@ -9,8 +9,16 @@
         <br>
         <input type="password" class="form-control" placeholder="Senha" required name="senha">
         <br>
+        <select name="tipologin" class="form-control" required>
+            <option value="C">Cliente</option>
+            <option value="F">Funcionário</option>
+        </select>
+        <br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
 
     </form>
+  <p align="center">
+        Faça o login para terminar seu pedido. <br/>
+        Ainda não é cadastrado? <a href="<?php echo base_url('cliente/adicionar') ?>">Cadastre-se aqui</a></p>
 </div> <!-- /container -->
 

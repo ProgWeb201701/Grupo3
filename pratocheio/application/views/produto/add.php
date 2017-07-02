@@ -1,7 +1,8 @@
+<div class="row-fluid">
 <?php echo form_open('produto/adicionar',array("class"=>"form-horizontal")); ?>
 
 <div class="col-sm-9 ">
-    <h1>Cadastro de Produtos</h1>
+    <h1><?= $titulo_pagina ?></h1>
      <HR SIZE="2">
     <br/>
 
@@ -28,18 +29,20 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="foto" class="col-md-2 control-label">Foto</label>
-		<div class="col-md-10">
-			<input type="text" name="foto" value="<?php echo $this->input->post('foto'); ?>" class="form-control" id="foto" />
-			<span class="text-danger"><?php echo form_error('foto');?></span>
-		</div>
-	</div>
-	
-	<div class="form-group">
-		<div class="col-sm-offset-6 col-sm-6">
-			<button type="submit" class="btn btn-success">Salvar</button>
+            <label for="foto" class="col-md-2 control-label">Foto</label>
+            <div class="col-md-10">            
+                <input type="file" name="foto" class="form-control" id="foto" />
+                <span class="text-danger"><?php echo form_error('foto'); ?></span>
+            </div>
         </div>
-	</div>
+	
+	 <div class="form-group">
+            <div class="col-sm-offset-6 col-sm-6">
+                <button type="submit" class="btn btn-success">Salvar</button>
+                <a href="javascript:history.go(-1)" class="btn btn-danger">Voltar</a>
+            </div>
+        </div>
 
 <?php echo form_close(); ?>
+</div>
 </div>
