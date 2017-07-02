@@ -93,7 +93,7 @@ class Funcionario extends CI_Controller {
                 $this->load->view('includes/template.php', $data);                
             }
         } else
-            mostra_mensagem('The funcionario que você está tentando editar não existe.');
+            mostra_mensagem('O funcionario que você está tentando editar não existe.');
     }
 
     /*
@@ -108,7 +108,7 @@ class Funcionario extends CI_Controller {
             $this->Funcionario_model->delete_funcionario($id_login);
             redirect('funcionario/index');
         } else
-            mostra_mensagem('The funcionario que você está tentando remover não existe.');
+            mostra_mensagem('O funcionario que você está tentando remover não existe.');
     }
 
 }
