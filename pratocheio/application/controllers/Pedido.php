@@ -231,7 +231,7 @@ class Pedido extends CI_Controller {
                 }
             }
 
-            mostra_mensagem("Pedido númmero <b>$id_pedido</b> realizado com sucesso. "
+            mostra_mensagem("Pedido número <b>$id_pedido</b> realizado com sucesso. "
                     . "<br/> A Previsão de entrega é de 1 hora."
                     . "<br/>Clique em Voltar para retornar à Página inicial.", base_url());
             return true;

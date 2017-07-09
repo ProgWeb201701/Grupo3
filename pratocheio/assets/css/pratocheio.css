@@ -4,3 +4,15 @@
     background: url('../fundo_banner.png') repeat-x;
     margin-bottom: 20px;
 }
+#imgRodape{
+    width:100%;
+    height:20%;
+    background: url('../fundo_banner.png') repeat-x;
+    margin-bottom: 20px;
+}
+#rodape{
+    width:100%;
+    height:20%;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+}

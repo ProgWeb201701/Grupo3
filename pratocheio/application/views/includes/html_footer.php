@@ -1,5 +1,19 @@
 <br/><br/>
+<div style="clear: both"></div>
+<div>
 
+    <hr>
+    <p align="center">
+        <span class="glyphicon glyphicon-envelope"></span> Rua Dona Neves, 1234 - Centro  
+        &nbsp; <span class="glyphicon glyphicon-phone-alt"></span> (55) 3429-8765 
+    </p>
+    <hr>
+    <p align="center">
+        Desenvolvido por Cristiane Conrad - Paula Maisa Cordeiro - 2017
+    </p>
+
+
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
