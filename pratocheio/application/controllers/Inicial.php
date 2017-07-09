@@ -36,8 +36,8 @@ class Inicial extends CI_Controller {
         $this->load->model('cliente_model');
         $this->load->model('funcionario_model');
         $usuario = $_POST['usuario'];
-        $senha = md5($_POST['senha']);
-        $tipo = $_POST['tipologin'];
+        $senha   = md5($_POST['senha']);
+        $tipo    = $_POST['tipologin'];
 
         if ($tipo == 'C') {
             $dadosCliente = $this->cliente_model->verificaSenha($usuario, $senha);
@@ -63,7 +63,7 @@ class Inicial extends CI_Controller {
                 $this->session->set_userdata('nome', $dadosFuncionario['nome']);
                 $this->session->set_userdata('usuario', $dadosFuncionario['usuario']);
                 $this->principal();
-            }
+            }            
         }
     }
 
@@ -80,10 +80,10 @@ class Inicial extends CI_Controller {
             return FALSE;
         }
     }
-
+    
     function cardapio() {
         $this->load->model('Produto_model');
-        $data['produtos'] = $this->Produto_model->get_all_produtos();
+        $data['produtos'] = $this->Produto_model->get_all_produtos();        
         $data['corpo_pagina'] = 'cardapio.php';
         $this->load->view('includes/template.php', $data);
     }

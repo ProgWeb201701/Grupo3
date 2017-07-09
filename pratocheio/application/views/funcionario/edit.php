@@ -2,7 +2,7 @@
     <h1><?= $titulo_pagina ?></h1>
     <HR SIZE="2">
     <br/>
-    <?php echo form_open('funcionario/edit/' . $funcionario['id_login'], array("class" => "form-horizontal")); ?>
+    <?php echo form_open('funcionario/editar/' . $funcionario['id_login'], array("class" => "form-horizontal")); ?>
 
     <div class="col-sm-9 ">
 

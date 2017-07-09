@@ -3,8 +3,8 @@
     <HR SIZE="2">
     <br/>
 
-<table class="table table-striped table-bordered">
-    <tr>
+    <table class="table table-striped table-bordered">
+        <tr>
             <th>Pedido</th>
             <th>Data/Hora</th>
             <th>Cliente</th>
@@ -14,8 +14,8 @@
             <th>Situação</th>
             <th>Detalhes</th>
         </tr>
-	<?php foreach($pedidos as $p){ ?>
- <tr>
+        <?php foreach ($pedidos as $p) { ?>
+            <tr>
                 <td><?php echo $p['id_pedido']; ?></td>
                 <td><?php echo $p['dataHora']; ?></td>
                 <td><?php echo $p['nome']; ?></td>
@@ -43,7 +43,7 @@
         <?php }
         ?>
     </table>
-<div class="pull-right">
-    <?php echo $this->pagination->create_links(); ?>    
-</div>
+    <div class="pull-right">
+<?php echo $this->pagination->create_links(); ?>    
+    </div>
 </div>

@@ -14,7 +14,7 @@ class Cliente extends CI_Controller {
     }
 
     /*
-     * Listing of clientes
+     * Listagem de clientes
      */
 
     function index() {
@@ -34,10 +34,12 @@ class Cliente extends CI_Controller {
     }
 
     /*
-     * Adding a new cliente
+     * Adicionando novo cliente
      */
 
     function adicionar() {
+        
+        //Validação dos campos
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
@@ -54,6 +56,8 @@ class Cliente extends CI_Controller {
         $this->form_validation->set_rules('cep', 'Cep', 'required|max_length[20]');
 
         if ($this->form_validation->run()) {
+            
+            //Prepara os dados depois da validação
             $params = array(
                 'senha'    => md5($this->input->post('senha')),
                 'email'    => $this->input->post('email'),
@@ -62,8 +66,11 @@ class Cliente extends CI_Controller {
                 'dt_nasc'  => dataSQL($this->input->post('dt_nasc')),
             );
 
+            //Adiciona o novo cliente no banco de dados
             $cliente_id = $this->Cliente_model->add_cliente($params);
             if ($cliente_id) {
+                //se adicionar o cliente com sucesso, insere o endereço na tabela de endereços
+                
                 $paramsEndereco = array(
                     'id_cliente'  => $cliente_id,
                     'rua'         => $this->input->post('rua'),
@@ -75,17 +82,22 @@ class Cliente extends CI_Controller {
                     'cidade'      => $this->input->post('cidade')
                 );
 
+                
                 $endereco_id = $this->Endereco_model->add_endereco($paramsEndereco);
             } else {
+                //mostra mensagem caso não consiga gravar
                 mostra_mensagem("Erro ao gravar os dados do cliente");
             }
 
+            //Verifica que tipo de usuário fez o cadastro (cliente ou funcionário para saber se volta para a lista de clientes (se for funcionário)
+            //ou se volta para a tela de login (para que o cliente possa logar)
             if (($this->session->userdata('logado') == 1) && ($this->session->userdata('tipo_login') == 'F')) {
                 redirect('cliente/index');
             } else {
                 redirect('inicial/mostraLogin');
             }
         } else {
+            //Se ocorrer erro da validação, volta para a tela de cadastro para mostrar os erros
             $data['titulo_pagina'] = 'Cadastro de Cliente';
             $data['corpo_pagina']  = 'cliente/add.php';
             $this->load->view('includes/template.php', $data);
@@ -97,7 +109,7 @@ class Cliente extends CI_Controller {
      */
 
     function editar($id_cliente) {
-        // check if the cliente exists before trying to edit it
+        // Verifica se o cliente existe antes de editar e pega os dados do cliente e do endereco
         $data['cliente']  = $this->Cliente_model->get_cliente($id_cliente);
         $data['endereco'] = $this->Endereco_model->get_by_cliente($id_cliente);
         $id_endereco      = $data['endereco']['id_endereco'];
@@ -131,8 +143,10 @@ class Cliente extends CI_Controller {
                     $params['senha'] = md5($this->input->post('senha'));
                 }
                 
+                //Atualiza os dados do cliente 
                 $this->Cliente_model->update_cliente($id_cliente, $params);
 
+                //Atualiza os dados do endereco
                 $paramsEndereco = array(
                     'id_cliente'  => $id_cliente,
                     'rua'         => $this->input->post('rua'),
@@ -167,8 +181,9 @@ class Cliente extends CI_Controller {
     function remover($id_cliente) {
         $cliente = $this->Cliente_model->get_cliente($id_cliente);
 
-        // check if the cliente exists before trying to delete it
+        // verifica se o cliente existe antes de tentar apagar o registro
         if (isset($cliente['id_cliente'])) {
+            //Apaga o endereco antes de apagar o cliente
             $this->Endereco_Model->delete_by_cliente($id_cliente);
             $this->Cliente_model->delete_cliente($id_cliente);
             redirect('cliente/index');

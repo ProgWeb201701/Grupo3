@@ -1,4 +1,10 @@
+<!-- Incompleto 
+Cardápio 
+Com foto nome do prato, valor, quantidade e forma de seleção
+Botão fechar pedido
 
+Quando clica no fechar exibe tela (tabela com produtos) do pedido com ações de excluir produtos do pedido e botão finalizar pedido.
+-->
 <div class = "row-fluid">
     <?php if ($produtos): ?>
         <?php foreach ($produtos as $p): ?>

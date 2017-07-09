@@ -4,8 +4,10 @@
  * www.crudigniter.com
  */
  
-class Cliente_model extends CI_Model{
-    function __construct(){
+class Cliente_model extends CI_Model
+{
+    function __construct()
+    {
         parent::__construct();
     }
     
@@ -60,10 +62,10 @@ class Cliente_model extends CI_Model{
     /*
      * function to delete cliente
      */
-    function delete_cliente($id_cliente){
+    function delete_cliente($id_cliente)
+    {
         return $this->db->delete('cliente',array('id_cliente'=>$id_cliente));
     }
-    
     
     function verificaSenha($emailCliente, $senhaCliente) {
         $this->db->where('email', $emailCliente);

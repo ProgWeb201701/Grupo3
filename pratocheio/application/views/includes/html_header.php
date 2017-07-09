@@ -20,8 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="<?php echo base_url().'assets/css/dashboard.css' ?>"/>
-    
-      <link rel="stylesheet" href="<?php echo base_url().'assets/css/pratocheio.css' ?>"/>
+    <link rel="stylesheet" href="<?php echo base_url().'assets/css/pratocheio.css' ?>"/>
     
     <script src="<?php echo base_url().'assets/js/pratocheio.js'?>" type="text/javascript"></script>
 

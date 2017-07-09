@@ -1,4 +1,3 @@
- 
 <div id="banner" class="col-sm-2 col-sm-offset-10 col-md-12 col-md-offset-0 main">
     <center>
         <img src="<?php echo base_url() . 'assets/logo.png' ?>" width="20%" height="20%"> 
@@ -18,7 +17,9 @@
 
             </div>
 
- <ul class="nav navbar-nav">
+
+
+            <ul class="nav navbar-nav">
                 <li class="active"><a href="<?php echo base_url() ?>">Home <span class="sr-only">Delivery Prato Cheio</span></a></li>
 
 
@@ -35,7 +36,7 @@
                 <?php if (($this->session->userdata('logado') == 1) && ($this->session->userdata('tipo_login') == 'F')): ?>                    
                     <li><a href="<?php echo base_url() ?>index.php/cliente/" target="_self">Clientes</a></li>
                     <li><a href="<?php echo base_url() ?>index.php/produto/" target="_self">Produtos</a></li>
-                    <li><a href="<?php echo base_url() ?>index.php/funcionario/" target="_self">FuncionÃ¡rios</a></li>
+                    <li><a href="<?php echo base_url() ?>index.php/funcionario/" target="_self">Funcionários</a></li>
                     <li><a href="<?php echo base_url() ?>index.php/pedido/" target="_self">Pedidos</a></li>
                 <?php endif; ?>
             </ul>
